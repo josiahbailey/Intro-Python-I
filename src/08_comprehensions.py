@@ -37,22 +37,6 @@ x = input("Enter comma-separated numbers: ").split(',')
 
 
 # What do you need between the square brackets to make it work?
-# def checkEven(num):
-#     if num % 2 == 0:
-#         return (num)
-
-
-# y = list(filter(None, [checkEven(int(num)) for num in x]))
-
-# print(y)
-
-# y = []
-# for num in x:
-#     if int(num) % 2 == 0:
-#         y.append(int(num))
-
-# print(y)
-
 y = [int(z) for z in x if int(z) % 2 == 0]
 
 print(y)
