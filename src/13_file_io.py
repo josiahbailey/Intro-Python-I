@@ -19,7 +19,9 @@ with open('./src/foo.txt') as f:
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
-with open('./bar.txt') as b:
+with open('./src/bar.txt') as b:
     b.write('testing testing\n hi hi hi \n your mom')
     b.close()
+
+with open('./src/bar.txt') as b:
     print(b.read())
