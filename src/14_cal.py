@@ -31,17 +31,18 @@ import sys
 import calendar
 from datetime import datetime
 
-x = input("Enter month and year seperated by comma: ").split(',')
+# x = input("Enter month and year seperated by comma: ").split(',')
 
 
-def create_calendar(x):
-    if x[0] != '':
-        month = int(x[0])
-        year = int(x[1])
-        print(calendar.month(year, month))
+def create_calendar():
+    x = sys.argv
+    today = datetime.today()
+    if len(x) == 3:
+        print(calendar.month(int(x[2]), int(x[1])))
+    elif len(x) == 2:
+        print(calendar.month(today.year, int(x[1])))
     else:
-        today = datetime.today()
         print(calendar.month(today.year, today.month))
 
 
-create_calendar(x)
+create_calendar()

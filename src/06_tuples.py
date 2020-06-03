@@ -39,9 +39,10 @@ b = (-14, 72)
 
 def print_tuple(T):
     if type(T) == int:
-        T = (T, 2)
+        T = (T,)
     for var in T:
         print(var)
+
 
 t = (1, 2, 5, 7, 99)
 print_tuple(t)  # Prints 1 2 5 7 99, one per line
